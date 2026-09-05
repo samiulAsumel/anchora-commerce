@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { verifyAccessTokenEdge } from '@/lib/jwt-edge';
 import { ACCESS_TOKEN_COOKIE } from '@/lib/auth-constants';
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const token = req.cookies.get(ACCESS_TOKEN_COOKIE)?.value;
 

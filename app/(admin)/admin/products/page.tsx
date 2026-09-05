@@ -29,7 +29,7 @@ export default async function AdminProductsPage() {
 
       <div className="mt-6 divide-y divide-border rounded-2xl border border-border bg-surface">
         {items.map((product) => (
-          <div key={product.id} className="flex items-center gap-4 px-5 py-3.5">
+          <div key={product.id} data-testid="product-row" className="flex items-center gap-4 px-5 py-3.5">
             <ProductThumb name={product.name} className="h-12 w-12 shrink-0 rounded-lg" />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{product.name}</p>
